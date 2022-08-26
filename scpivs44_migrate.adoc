@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate.html 
+keywords:  
+summary: 'Les applets de commande SnapCenter Windows PowerShell permettent de migrer les métadonnées SnapCenter Plug-in pour VMware vSphere du serveur SnapCenter sous Windows vers l"appliance virtuelle Linux SnapCenter Plug-in pour VMware vSphere.' 
+---
+= Options de migration et chemins pris en charge
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les applets de commande SnapCenter Windows PowerShell permettent de migrer les métadonnées SnapCenter Plug-in pour VMware vSphere du serveur SnapCenter sous Windows vers l'appliance virtuelle Linux SnapCenter Plug-in pour VMware vSphere.
+
+
+
+== Options de migration
+
+Il existe deux options de migration :
+
+* Migration depuis SnapCenter
++
+Vous devez migrer les métadonnées pour ce qui suit à partir d'un SnapCenter Windows :
+
++
+** Sauvegardes cohérentes au niveau des machines virtuelles réalisées par le plug-in SnapCenter pour VMware vSphere lorsque le plug-in était exécuté en tant que composant Windows de SnapCenter.
+** Protection des données cohérente au niveau des applications des bases de données virtualisées ou des systèmes de fichiers réalisés par un plug-in SnapCenter basé sur les applications, avec prise en charge du plug-in SnapCenter pour VMware vSphere lorsque le plug-in était exécuté en tant que composant Windows de SnapCenter.
++
+Pour migrer, utilisez la cmdlet Windows SnapCenter PowerShell `invoke-SCVOVAMigration.`
+
++
+Vous pouvez migrer uniquement les métadonnées depuis SnapCenter 4.0 ou version ultérieure.
+
+
+
+* Migration depuis VSC
++
+Vous pouvez migrer les métadonnées VSC 6.2.x (SMVI) pour les tâches de sauvegarde qui ne sont pas intégrées à SnapCenter.
+
++
+Pour migrer, utilisez la section NetApp ToolChest : utilitaire d'importation NetApp pour SnapCenter et console de stockage virtuel. Sélectionnez l'option de migration VSC to SnapCenter.
+
++
+Vous ne pouvez migrer que les métadonnées pour les sauvegardes existantes. Par exemple, si vous ne disposez pas de sauvegardes existantes, vous ne pouvez pas migrer que des stratégies.
+
+
+
+
+
+== Chemins de migration pris en charge
+
+Voir la link:scpivs44_release_notes.html["Notes de version du plug-in SnapCenter pour VMware vSphere"^] pour plus d'informations sur les chemins de mise à niveau et de migration pris en charge.

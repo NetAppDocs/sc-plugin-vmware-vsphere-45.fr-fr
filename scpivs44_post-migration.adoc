@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_post-migration.html 
+keywords:  
+summary: Problèmes pouvant survenir après la migration des métadonnées de sauvegarde vers le plug-in SnapCenter pour VMware vSphere. 
+---
+= Après migration
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Problèmes pouvant survenir après la migration des métadonnées de sauvegarde vers le plug-in SnapCenter pour VMware vSphere.
+
+* Bundle du journal de migration
++
+Téléchargez le bundle du journal de migration à partir du `App_Data/MigrationLog` Dans le dossier d'installation de SnapCenter. Conservez le bundle du journal de migration jusqu'à ce que vous soyez sûr que la migration a réussi.
+
+* Détails du travail sur le tableau de bord
++
+Les informations sur les sauvegardes migrées sont répertoriées dans le volet travaux récents du client Web VMware vSphere, mais les informations détaillées ne s'affichent pas dans le tableau de bord tant que les sauvegardes ne sont pas effectuées après la migration.
+
+* Erreurs d'authentification
++
+Si vous n'utilisez pas les informations d'identification Admin, vous risquez de rencontrer une erreur d'authentification.
+
++
+link:scpivs44_manage_authentication_errors.html["Gérer les erreurs d'authentification"]
+
+* Noms des sauvegardes
++
+Les noms de sauvegarde avant la migration ont le format RGName `_HostName_Timestamp`. Par exemple : `-NAS_DS_RG_perf1server_07-05-2019_02.11.59.9338`.
+
++
+Les noms de sauvegarde après migration ont le format `RGName_Timestamp`.
+
++
+Par exemple : `-NAS_VM_RG_07-07-2019_21.20.00.0609`.
+
+* Pré et post-scripts
++
+Les scripts configurés pour les groupes de ressources ne sont pas migrés. Étant donné que les scripts écrits pour les systèmes Windows ne s'exécutent pas sur l'appliance virtuelle basée sur Linux, il peut être nécessaire de recréer tout ou partie des scripts et d'ajouter ces scripts après la migration. Par exemple, les chemins d'accès aux fichiers dans Windows n'existent pas sous Linux et un appel pour un `.bat` Le fichier batch ne fonctionne pas sous Linux.
+
++
+Une solution consiste à placer un script Windows existant sur l'appliance virtuelle basée sur Linux et à tester si le script fonctionne sans modification. S'il ne fonctionne pas correctement, remplacez chaque commande Windows dans le script par une commande compatible Linux correspondante.
+
+* Informations d'identification de restauration des fichiers invités
++
+Les informations d'identification de restauration des fichiers invités ne sont pas migrées. Par conséquent, vous devez créer de nouvelles informations d'identification de fichier invité après la migration.
+
+* `scbr.override` fichier de configuration
++
+Si vous avez personnalisé des paramètres dans le `scbr.override` Fichier de configuration, vous devez ensuite déplacer ce fichier vers l'appliance virtuelle du plug-in SnapCenter VMware, puis redémarrer le service du client Web.
+
+* Mise à niveau des plug-ins applicatifs SnapCenter
++
+Si vous utilisez le plug-in SnapCenter VMware pour prendre en charge d'autres plug-ins SnapCenter, vous devez mettre à jour ces plug-ins vers la version 4.2 ou ultérieure.
+
+* Désinstaller SnapCenter Server
++
+Si vous utilisez SnapCenter uniquement pour la protection des données cohérente avec les machines virtuelles ou les défaillances, après la migration de toutes les sauvegardes de la machine virtuelle vers le plug-in SnapCenter VMware, vous pouvez désinstaller SnapCenter Server sur l'hôte Windows
+
+

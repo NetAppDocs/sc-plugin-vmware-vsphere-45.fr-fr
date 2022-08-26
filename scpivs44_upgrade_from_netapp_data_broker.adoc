@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade_from_netapp_data_broker.html 
+keywords:  
+summary: Si vous souhaitez utiliser les nouvelles fonctionnalités fournies par le plug-in SnapCenter pour VMware vSphere, vous devez effectuer une mise à niveau depuis NetApp Data Broker 1.0.x vers le plug-in SnapCenter pour VMware vSphere. 
+---
+= Mise à niveau depuis NetApp Data Broker
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si vous souhaitez utiliser les nouvelles fonctionnalités fournies par le plug-in SnapCenter pour VMware vSphere, vous devez effectuer une mise à niveau depuis NetApp Data Broker 1.0.x vers le plug-in SnapCenter pour VMware vSphere.
+
+.Avant de commencer
+* La machine virtuelle que vous souhaitez mettre à niveau doit disposer de 12 Go de RAM.
+* La machine virtuelle à mettre à niveau doit être sous tension.
+* Une meilleure pratique consiste à sauvegarder le serveur virtuel qui contient NetApp Data Broker avant la mise à niveau.
+
+
+Il existe trois étapes de base de la mise à niveau :
+
+. Préparation à la mise à niveau.
+. Téléchargez la mise à niveau .`iso` fichier.
+. Installez la mise à niveau.
++
+.. Téléchargez le .`iso` fichier dans un datastore.
+.. Connectez la machine virtuelle au .`iso` fichier dans le datastore.
+.. Exécutez la mise à niveau.
+
+
+
+
+.Étapes
+. Préparation à la mise à niveau en désactivant le plug-in SnapCenter pour VMware vSphere.
++
+.. Connectez-vous à l'interface graphique de gestion des courtiers de données NetApp.
++
+L'IP s'affiche lorsque vous déployez NetApp Data Broker.
+
+.. Cliquez sur Configuration dans le volet de navigation de gauche, puis cliquez sur l'option Service dans la section *Détails du plug-in* pour désactiver le plug-in.
+
+
+. Téléchargez la mise à niveau .`iso` fichier.
++
+.. Connectez-vous au site de support NetApp ( https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]).
+.. Dans la liste de produits, sélectionnez *Plug-in SnapCenter pour VMware vSphere*, puis cliquez sur le bouton *DOWNLOAD LATEST*.
+.. Téléchargez la mise à niveau du plug-in SnapCenter pour VMware vSphere .`iso` fichier à n'importe quel emplacement.
+
+
+. Installez la mise à niveau.
++
+.. Dans votre navigateur, accédez à VMware vSphere vCenter.
+.. Dans l'interface graphique de vCenter, cliquez sur *vSphere Web client (HTML5)*.
+.. Connectez-vous à la page *Single Sign-on de VMware vCenter*.
+.. Dans le volet navigateur, cliquez sur la machine virtuelle NetApp Data Broker à mettre à niveau, puis cliquez sur l'onglet *Résumé*.
+.. Dans le volet *Related Objects*, cliquez sur n'importe quel datastore dans la liste, puis cliquez sur l'onglet *Summary*.
+.. Dans l'onglet *fichiers* du datastore sélectionné, cliquez sur n'importe quel dossier de la liste, puis cliquez sur l'icône de stockage (*Télécharger un fichier vers le datastore*).
+.. Sur l'écran contextuel de mise à niveau, accédez à l'emplacement où vous avez téléchargé le `.iso` cliquez sur le fichier `.iso` Image du fichier, puis cliquez sur *Ouvrir*.
++
+Le fichier est chargé dans le datastore.
+
+.. Revenez à la machine virtuelle NetApp Data Broker que vous souhaitez mettre à niveau, puis cliquez sur l'onglet *Résumé*.
++
+Dans le volet *VM Hardware*, dans le champ CD/DVD, la valeur doit être "déconnectée".
+
+.. Cliquez sur l'icône de connexion dans le champ CD/DVD et sélectionnez *connexion à l'image CD/DVD sur un datastore*.
++
+image:scpivs44_image32.png["Erreur : image graphique manquante"]
+
+.. Dans l'assistant, procédez comme suit :
++
+Dans la colonne datastores, sélectionnez le datastore sur lequel vous avez téléchargé le .`iso` fichier.
+
++
+Dans la colonne contenu, accédez à `.iso` Fichier que vous avez chargé, assurez-vous que “image ISO” est sélectionné dans le champ Type de fichier, puis cliquez sur *OK*.
+
++
+Attendez que le champ affiche l'état « connecté ».
+
+.. Connectez-vous à la console de maintenance en accédant à l'onglet *Résumé* de l'appliance virtuelle, puis cliquez sur l'icône de démarrage pour démarrer la console de maintenance.
+.. Saisissez *2* pour la configuration du système, puis saisissez *8* pour la mise à niveau.
+.. Saisissez *y* pour continuer et démarrer la mise à niveau.
+
+
+
+
+Une fois que le système affiche le message "mise à niveau réussie", le système tente de démarrer les services.
+
+. Attendez que le message "appuyez SUR ENTRÉE pour continuer" s'affiche, puis connectez-vous à l'interface graphique de gestion SnapCenter Plug-in pour VMware vSphere.
++
+L'adresse IP est identique à l'ancienne adresse de courtier en données NetApp.
+
+. Dans la section *Plug-in Details*, activez le service SnapCenter Plug-in pour VMware vSphere et assurez-vous que l’état indique “Connected”.
+
+
+Si vous utilisez le plug-in SnapCenter pour VMware vSphere pour prendre en charge la protection des données basée sur les applications et que le plug-in ne peut pas communiquer avec le serveur SnapCenter, actualisez la connexion au serveur SnapCenter : dans l'interface graphique SnapCenter, cliquez sur *hôtes*, puis sélectionnez l'hôte VMware, puis cliquez sur *informations d'identification du serveur Push*.

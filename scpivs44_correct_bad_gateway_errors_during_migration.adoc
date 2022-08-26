@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_correct_bad_gateway_errors_during_migration.html 
+keywords:  
+summary: 'Vous risquez de rencontrer une erreur de passerelle incorrecte lorsque vous ajoutez manuellement des fichiers ou d"autres contenus au plug-in SnapCenter pour VMware vSphere, puis migrez.' 
+---
+= Corriger les erreurs de passerelle incorrecte pendant la migration
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il y a plusieurs raisons pour lesquelles vous pourriez rencontrer une erreur de “mauvaise passerelle”.
+
+
+
+== Scénario 1
+
+Vous avez ajouté manuellement des fichiers ou un autre contenu au plug-in SnapCenter pour VMware vSphere, puis tenté de migrer. Dans ce scénario, l'espace disponible dans l'appliance pour le processus de migration est insuffisant.
+
+Pour corriger cette erreur, supprimez tous les fichiers ajoutés manuellement.
+
+
+
+== Scénario 2
+
+Le plug-in SnapCenter pour la connexion VMware vSphere a été arrêté ou le service a été arrêté pendant la migration.
+
+L'état de la connexion du plug-in SnapCenter pour VMware vSphere doit être « connecté » au cours du processus de migration. Vous pouvez également mettre à jour manuellement la configuration de délai d'exécution dans l'appliance virtuelle.
