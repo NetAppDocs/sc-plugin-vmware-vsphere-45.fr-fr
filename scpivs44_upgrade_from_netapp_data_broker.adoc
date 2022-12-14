@@ -22,6 +22,7 @@ Si vous souhaitez utiliser les nouvelles fonctionnalités fournies par le plug-i
 * Une meilleure pratique consiste à sauvegarder le serveur virtuel qui contient NetApp Data Broker avant la mise à niveau.
 
 
+.Description de la tâche
 Il existe trois étapes de base de la mise à niveau :
 
 . Préparation à la mise à niveau.
@@ -89,6 +90,7 @@ Attendez que le champ affiche l'état « connecté ».
 
 
 
+.Une fois que vous avez terminé
 Une fois que le système affiche le message "mise à niveau réussie", le système tente de démarrer les services.
 
 . Attendez que le message "appuyez SUR ENTRÉE pour continuer" s'affiche, puis connectez-vous à l'interface graphique de gestion SnapCenter Plug-in pour VMware vSphere.

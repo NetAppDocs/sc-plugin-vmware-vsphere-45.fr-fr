@@ -22,6 +22,7 @@ Si vous utilisez le plug-in SnapCenter pour VMware Windows et que vous souhaitez
 * Assurez-vous que le serveur SnapCenter est mis à niveau. Voir la link:scpivs44_release_notes.html["Notes de version du plug-in SnapCenter pour VMware vSphere"^] pour plus d'informations sur les chemins de mise à niveau pris en charge.
 
 
+.Description de la tâche
 Il existe quatre étapes de base :
 
 . Téléchargez le plug-in SnapCenter pour VMware vSphere `.ova` fichier.

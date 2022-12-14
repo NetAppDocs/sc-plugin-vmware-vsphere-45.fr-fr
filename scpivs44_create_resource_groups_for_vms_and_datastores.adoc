@@ -23,6 +23,7 @@ NOTE: Pour cela, il n'est pas possible d'utiliser simultanément FlexGroup et Fl
 
 Le plug-in SnapCenter pour VMware vSphere 4.5 et versions ultérieures prend en charge les datastores dans des LUN de grande taille, jusqu'à 128 To sur des agrégats ASA. Pour les LUN de grande taille, SnapCenter utilise uniquement des LUN à provisionnement lourd pour éviter la latence.
 
+.Description de la tâche
 Vous pouvez à tout moment ajouter ou supprimer des VM et des datastores d'un groupe de ressources.
 
 * La sauvegarde d'une seule ressource
@@ -61,7 +62,7 @@ IMPORTANT: N'ajoutez pas de VM inaccessibles. Bien que vous puissiez créer un g
 SnapCenter vérifie la compatibilité lors de la création d'un groupe de ressources.
 
 +
- compatibility check failures
+<<Gérer les échecs de contrôle de compatibilité>>
 
 
 
@@ -130,7 +131,7 @@ image:scpivs44_image17.png["Erreur : image graphique manquante"]
 Lorsque vous cliquez sur *Suivant*, le système vérifie d'abord que SnapCenter gère et est compatible avec le stockage sur lequel les VM ou datastores sélectionnés sont situés.
 
 +
-Si le message s'affiche `Selected virtual machine is not SnapCenter compatible or Selected datastore is not SnapCenter compatible` S'affiche alors qu'un VM ou un datastore sélectionné n'est pas compatible avec SnapCenter. Voir  compatibility check failures pour en savoir plus.
+Si le message s'affiche `Selected virtual machine is not SnapCenter compatible or Selected datastore is not SnapCenter compatible` S'affiche alors qu'un VM ou un datastore sélectionné n'est pas compatible avec SnapCenter. Voir <<Gérer les échecs de contrôle de compatibilité>> pour en savoir plus.
 
 . Sur la page *Spanning disks*, sélectionnez une option pour les machines virtuelles avec plusieurs VMDK sur plusieurs datastores :
 +
