@@ -1805,7 +1805,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 05:15:27 +0000">11/17/2022</time>
+    <time datetime="2022-12-14 18:18:21 +0000">12/14/2022</time>
     
   
 
@@ -1839,6 +1839,7 @@ Pour cela, il n&#8217;est pas possible d&#8217;utiliser simultanément FlexGroup
 <p>Le plug-in SnapCenter pour VMware vSphere 4.5 et versions ultérieures prend en charge les datastores dans des LUN de grande taille, jusqu&#8217;à 128 To sur des agrégats ASA. Pour les LUN de grande taille, SnapCenter utilise uniquement des LUN à provisionnement lourd pour éviter la latence.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Vous pouvez à tout moment ajouter ou supprimer des VM et des datastores d&#8217;un groupe de ressources.</p>
 </div>
 <div class="ulist">
@@ -1905,10 +1906,8 @@ N&#8217;ajoutez pas de VM inaccessibles. Bien que vous puissiez créer un groupe
 <div class="paragraph">
 <p>SnapCenter vérifie la compatibilité lors de la création d&#8217;un groupe de ressources.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>compatibility check failures</pre>
-</div>
+<div class="paragraph">
+<p><a href="#gérer-les-échecs-de-contrôle-de-compatibilité">Gérer les échecs de contrôle de compatibilité</a></p>
 </div>
 </li>
 </ul>
@@ -2026,7 +2025,7 @@ A <code>-recent</code> la sauvegarde est créée pour chaque stratégie associé
 <p>Lorsque vous cliquez sur <strong>Suivant</strong>, le système vérifie d&#8217;abord que SnapCenter gère et est compatible avec le stockage sur lequel les VM ou datastores sélectionnés sont situés.</p>
 </div>
 <div class="paragraph">
-<p>Si le message s&#8217;affiche <code>Selected virtual machine is not SnapCenter compatible or Selected datastore is not SnapCenter compatible</code> S&#8217;affiche alors qu&#8217;un VM ou un datastore sélectionné n&#8217;est pas compatible avec SnapCenter. Voir  compatibility check failures pour en savoir plus.</p>
+<p>Si le message s&#8217;affiche <code>Selected virtual machine is not SnapCenter compatible or Selected datastore is not SnapCenter compatible</code> S&#8217;affiche alors qu&#8217;un VM ou un datastore sélectionné n&#8217;est pas compatible avec SnapCenter. Voir <a href="#gérer-les-échecs-de-contrôle-de-compatibilité">Gérer les échecs de contrôle de compatibilité</a> pour en savoir plus.</p>
 </div>
 </li>
 <li>
