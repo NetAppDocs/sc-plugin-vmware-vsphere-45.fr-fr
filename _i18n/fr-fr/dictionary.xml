@@ -445,7 +445,6 @@
   <block id="b3b58566d772ea091ad559ad7c722828" category="inline-link-macro">Problèmes et opérations nécessaires après le déploiement</block>
   <block id="8d9c5cc14a4e4caa925cbd7a13131b96" category="paragraph"><block ref="8d9c5cc14a4e4caa925cbd7a13131b96" category="inline-link-macro-rx"></block></block>
   <block id="c668bd9b3cf929998758f1286539cf07" category="inline-link-macro">Migrer les métadonnées de sauvegarde SnapCenter Windows</block>
-  <block id="5ab39eb962f4ca6c2fa2841599dc4b73" category="paragraph"><block ref="5ab39eb962f4ca6c2fa2841599dc4b73" category="inline-link-macro-rx"></block></block>
   <block id="2b0dafc2da4c6291434d6dd354abe38d" category="summary">La commande de migration assure la migration des métadonnées depuis SnapCenter 4.0 et versions ultérieures uniquement. Si vous utilisez une version antérieure de SnapCenter, vous devez d'abord effectuer la mise à niveau avant de pouvoir effectuer la migration.</block>
   <block id="023f24f55850eacb351f762db9b50e81" category="doc">Présentation de la migration</block>
   <block id="2feaeb2408c183d076a33a4219e1d2f9" category="section-title">Qu'est-ce qui est migré</block>
@@ -601,7 +600,6 @@
   <block id="7ea045d5f9f1f71a21d66023c045129c" category="paragraph">La base de données MySQL de sauvegarde est restaurée à son emplacement d'origine.</block>
   <block id="89321ccbd89a9e660bc76b0f2974632d" category="summary">Le plug-in SnapCenter VMware utilise le cryptage SSL pour sécuriser les communications avec le navigateur client. Bien que cela active les données chiffrées sur le réseau, la création d'un nouveau certificat auto-signé, ou l'utilisation de votre propre infrastructure d'autorité de certification ou d'une autorité de certification tierce partie, garantit que le certificat est unique pour votre environnement.</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">Article de la base de connaissances : comment créer et/ou importer un certificat SSL dans le plug-in SnapCenter pour VMware vSphere</block>
-  <block id="ba9184cb661fa8aa1f1e6f33c3d4f7b2" category="paragraph">Voir la<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block>.</block>
   <block id="421829fbd339504809d87be62b8dd3b1" category="summary">Les notes de version fournissent des informations importantes sur cette version du plug-in SnapCenter pour VMware vSphere, notamment les exigences de licence, les problèmes connus, les précautions, les limites et toutes les mises à jour ou corrections de la documentation.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Notes de mise à jour</block>
   <block id="719eed7371ae4d07ca201e91a820334c" category="paragraph">Les notes de version fournissent des informations importantes sur cette version du plug-in SnapCenter pour VMware vSphere, notamment les exigences de licence, les problèmes connus, les précautions, les limites et toutes les mises à jour ou corrections de la documentation. Pour plus d'informations, voir :</block>
@@ -660,7 +658,6 @@
   <block id="5990783a93858d845e12e401808f16f3" category="list-text">Lorsque le nombre de copies Snapshot sur le stockage secondaire (miroir-coffre) atteint la limite maximale, l'activité pour enregistrer une sauvegarde et appliquer la conservation lors de l'opération de sauvegarde échoue et l'erreur suivante :<block ref="5a9cca26582442620c7aafc02ff929a9" prefix=" " category="inline-code"></block></block>
   <block id="7cb7ec638ee3f628b5dd7b29b735054f" category="paragraph">Pour corriger ce problème, configurez la règle de conservation SnapMirror pour le stockage secondaire afin d'éviter d'atteindre la limite maximale des copies Snapshot.</block>
   <block id="585f74b2337dcf50d5f84248087dbc7a" category="inline-link">Informations SnapCenter sur l'utilisation du contrôle d'accès basé sur des rôles</block>
-  <block id="339d9a9c6148bb34e3d15a00f296465c" category="paragraph">Pour plus d'informations sur la manière dont les administrateurs attribuent des ressources aux utilisateurs, reportez-vous à la section<block ref="3c6a9a14d0d13aed475a45101fc3cc00" category="inline-link-rx"></block>.</block>
   <block id="600a5d9204570f4fa6ca6b92c38201a2" category="list-text">Si vous souhaitez des sauvegardes cohérentes avec les machines virtuelles, VMware Tools doit être installé et en cours d'exécution. VMware Tools est nécessaire pour arrêter les machines virtuelles.</block>
   <block id="567ee5fafb197286f35c17cbadbca640" category="paragraph">La plupart des champs de ces pages de l'assistant sont explicites. Les informations suivantes décrivent certains des champs pour lesquels vous pouvez avoir besoin de conseils.</block>
   <block id="406017c1f63a5ea525013c02ee27c794" category="list-text">Dans le volet navigateur de gauche du client Web VMware vSphere, cliquez sur *Policies*.</block>
@@ -1776,10 +1773,6 @@
   <block id="3d2b891e87f58587dcf56e520915afef" category="section-title">Scénario 2</block>
   <block id="f10b6f1c4d02bc80958fe9ea3ad90e77" category="paragraph">Le plug-in SnapCenter pour la connexion VMware vSphere a été arrêté ou le service a été arrêté pendant la migration.</block>
   <block id="f8347cb1619ceb451f0b50f381bb2720" category="paragraph">L'état de la connexion du plug-in SnapCenter pour VMware vSphere doit être « connecté » au cours du processus de migration. Vous pouvez également mettre à jour manuellement la configuration de délai d'exécution dans l'appliance virtuelle.</block>
-  <block id="8a4139ea0786f41cc68aee2d93ca450a" category="paragraph">La commande de migration migre les métadonnées de #SnapCenter 4.0 et versions ultérieures uniquement#. Si vous utilisez une version antérieure de SnapCenter, vous devez d'abord effectuer la mise à niveau avant de pouvoir effectuer la migration.</block>
-  <block id="ec3d3431008e42a4c37055a78db7f12e" category="list-text">Inclus dans la migration</block>
-  <block id="076b638a7f6c60dc2af3157c7af35158" category="list-text">Processus de l'applet de commande de migration</block>
-  <block id="4da72ab114de409c72a5b91f5ad57eac" category="list-text">Enregistre l'hôte vSphere pour le plug-in SnapCenter VMware `avec SnapCenter pour prendre en charge les sauvegardes basées sur les applications de bases de données virtualisées et de systèmes de fichiers (application sur sauvegardes VMDK).</block>
   <block id="041b4550a0ec6359f99eb2257afd1afa" category="summary">Lorsque vous restaurez une machine virtuelle, vous pouvez remplacer le contenu existant par la copie de sauvegarde que vous sélectionnez ou effectuer une copie de la machine virtuelle.</block>
   <block id="0b156eb7ae06ec8e963e1dd7bed83e94" category="doc">Restauration de machines virtuelles à partir des sauvegardes</block>
   <block id="b14e0e0fe870958315bd1b702bfa088a" category="list-text">Vers le datastore d'origine monté sur l'hôte ESXi d'origine (qui remplace la machine virtuelle d'origine)</block>
@@ -1980,4 +1973,7 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="4ddfe5345c1893eaed7f3552ae181f2a" category="paragraph">Voir le<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>.</block>
+  <block id="9c6e71898eae8897a7d429e3065e5a68" category="paragraph">Pour plus d'informations sur la manière dont les administrateurs attribuent des ressources aux utilisateurs, consultez le<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block>.</block>
+  <block id="a621a06ff9228f52f24b83c3da378df2" category="paragraph"><block ref="a621a06ff9228f52f24b83c3da378df2" category="inline-link-macro-rx"></block></block>
 </blocks>
