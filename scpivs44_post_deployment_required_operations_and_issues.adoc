@@ -23,7 +23,7 @@ Si vous êtes un nouvel utilisateur SnapCenter, vous devez ajouter des machines 
 
 * Utilisateur SnapCenter existant
 +
-Si vous êtes un utilisateur SnapCenter existant, vous devez migrer votre machine virtuelle SnapCenter, les sauvegardes et métadonnées de datastores. Pour plus d'informations sur la migration, voir link:scpivs44_migrate.html#migration-options.html["Options de migration"^].
+Si vous êtes un utilisateur existant de SnapCenter, vous devez migrer vos sauvegardes et métadonnées existantes de machines virtuelles et de banques de données SnapCenter. Pour obtenir des informations sur la migration, consultez link:scpivs44_migrate.html#migration-options["Options de migration"^].
 
 
 
